@@ -25,7 +25,7 @@ const getChampionRotation = () => {
 };
 
 const getChampionNames = (championIds) => {
-	const filePath = path.join(__dirname, "../media", "champion.json");
+	const filePath = path.join(__dirname, "../../media", "champion.json");
 	const championData = JSON.parse(fs.readFileSync(filePath, "utf-8"));
 	const championNames = new Map();
 	for (i in championData.data) {
