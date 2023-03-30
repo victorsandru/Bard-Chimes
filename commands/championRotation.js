@@ -1,8 +1,4 @@
-const {
-	SlashCommandBuilder,
-	ActionRowBuilder,
-	StringSelectMenuBuilder,
-} = require("discord.js");
+const { SlashCommandBuilder } = require("discord.js");
 const fetch = require("node-fetch");
 const fs = require("fs");
 const path = require("path");
