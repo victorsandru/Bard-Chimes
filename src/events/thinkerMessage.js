@@ -15,8 +15,7 @@ module.exports = {
 			msg.content.includes("think") ||
 			msg.content.includes("thinking") ||
 			msg.content.includes("thinks") ||
-			msg.content.includes("thought") ||
-			msg.content.includes("hm");
+			msg.content.includes("thought");
 		if (think) {
 			msg.reply({ embeds: [thinkerEmbed] });
 		}

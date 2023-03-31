@@ -9,7 +9,7 @@ const path = require("path");
 const fetch = require("node-fetch");
 
 const getChampion = (champ) => {
-	const filePath = path.join(__dirname, "../media", "champion.json");
+	const filePath = path.join(__dirname, "../../media", "champion.json");
 	const championData = JSON.parse(fs.readFileSync(filePath, "utf-8"));
 	champ = champ.replace(/[^a-zA-Z]/g, "");
 	for (i in championData.data) {
