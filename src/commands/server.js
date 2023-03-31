@@ -5,8 +5,11 @@ module.exports = {
 		.setName("server")
 		.setDescription("Provides information about the server."),
 	async execute(interaction) {
-		await interaction.reply(
-			`This server is ${interaction.guild.name} and has ${interaction.guild.memberCount} members.`
-		);
+		// const guild = interaction.member.guild.id;
+		console.log(interaction.member.guild.members.cache);
+		await interaction.reply({
+			content: `This server is ${interaction.guild.name} and has ${interaction.guild.memberCount} members.`,
+			emphermal: true,
+		});
 	},
 };
