@@ -1,14 +1,16 @@
 FROM node:18-alpine
 ENV NODE_ENV=production
 
-WORKDIR /src
+WORKDIR /
 
-COPY ["src/package.json", "src/package-lock.json*", "./"]
+COPY ["package.json", "package-lock.json*", "./"]
 
 RUN npm install --production
 
 COPY . .
 
-RUN node src/deploy-commands.js
+RUN node deploy-commands.js
 
-CMD [ "node", "src/index.js" ]
+EXPOSE 8080
+
+CMD [ "node", "index.js" ]
