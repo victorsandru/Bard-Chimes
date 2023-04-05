@@ -9,7 +9,7 @@ module.exports = {
 		console.log(interaction.member.guild.members.cache);
 		await interaction.reply({
 			content: `This server is ${interaction.guild.name} and has ${interaction.guild.memberCount} members.`,
-			emphermal: true,
+			ephemeral: true,
 		});
 	},
 };
